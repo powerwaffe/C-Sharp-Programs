@@ -1,4 +1,4 @@
-﻿namespace My_First_Project
+﻿namespace Hello_World
 {
     partial class Form1
     {
@@ -28,24 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.calculateTaxButton = new System.Windows.Forms.Button();
+            this.messageButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // calculateTaxButton
+            // messageButton
             // 
-            this.calculateTaxButton.Location = new System.Drawing.Point(90, 109);
-            this.calculateTaxButton.Name = "calculateTaxButton";
-            this.calculateTaxButton.Size = new System.Drawing.Size(88, 41);
-            this.calculateTaxButton.TabIndex = 0;
-            this.calculateTaxButton.Text = "CLICK ME";
-            this.calculateTaxButton.UseVisualStyleBackColor = true;
+            this.messageButton.Location = new System.Drawing.Point(128, 42);
+            this.messageButton.Name = "messageButton";
+            this.messageButton.Size = new System.Drawing.Size(89, 47);
+            this.messageButton.TabIndex = 0;
+            this.messageButton.Text = "Display Message";
+            this.messageButton.UseVisualStyleBackColor = true;
+            this.messageButton.Click += new System.EventHandler(this.messageButton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(282, 253);
-            this.Controls.Add(this.calculateTaxButton);
+            this.ClientSize = new System.Drawing.Size(359, 124);
+            this.Controls.Add(this.messageButton);
             this.Name = "Form1";
             this.Text = "My First Program";
             this.ResumeLayout(false);
@@ -54,7 +55,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button calculateTaxButton;
+        private System.Windows.Forms.Button messageButton;
     }
 }
 

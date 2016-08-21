@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{475D63A2-EEFC-4FAF-B684-B785DED31750}</ProjectGuid>
+    <ProjectGuid>{9F0BBB17-46F1-4DA8-83E0-3D078D655377}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>My_First_Project</RootNamespace>
-    <AssemblyName>My First Project</AssemblyName>
+    <RootNamespace>Code_Demo</RootNamespace>
+    <AssemblyName>Code Demo</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
