@@ -35,6 +35,8 @@
             this.btnCalculateGrossPay = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tbCalculatedGrossPay = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -49,7 +51,7 @@
             // 
             // tbHoursWorked
             // 
-            this.tbHoursWorked.Location = new System.Drawing.Point(155, 46);
+            this.tbHoursWorked.Location = new System.Drawing.Point(186, 44);
             this.tbHoursWorked.Margin = new System.Windows.Forms.Padding(4);
             this.tbHoursWorked.Name = "tbHoursWorked";
             this.tbHoursWorked.Size = new System.Drawing.Size(132, 22);
@@ -67,7 +69,7 @@
             // 
             // tbHourlyPayRate
             // 
-            this.tbHourlyPayRate.Location = new System.Drawing.Point(155, 94);
+            this.tbHourlyPayRate.Location = new System.Drawing.Point(186, 91);
             this.tbHourlyPayRate.Margin = new System.Windows.Forms.Padding(4);
             this.tbHourlyPayRate.Name = "tbHourlyPayRate";
             this.tbHourlyPayRate.Size = new System.Drawing.Size(132, 22);
@@ -75,7 +77,7 @@
             // 
             // btnCalculateGrossPay
             // 
-            this.btnCalculateGrossPay.Location = new System.Drawing.Point(39, 160);
+            this.btnCalculateGrossPay.Location = new System.Drawing.Point(40, 183);
             this.btnCalculateGrossPay.Margin = new System.Windows.Forms.Padding(4);
             this.btnCalculateGrossPay.Name = "btnCalculateGrossPay";
             this.btnCalculateGrossPay.Size = new System.Drawing.Size(95, 47);
@@ -86,7 +88,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(243, 160);
+            this.btnExit.Location = new System.Drawing.Point(243, 183);
             this.btnExit.Margin = new System.Windows.Forms.Padding(4);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(95, 47);
@@ -97,7 +99,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(145, 160);
+            this.btnClear.Location = new System.Drawing.Point(145, 183);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(91, 47);
             this.btnClear.TabIndex = 5;
@@ -105,11 +107,30 @@
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(36, 137);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(144, 17);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Calculated Gross Pay";
+            // 
+            // tbCalculatedGrossPay
+            // 
+            this.tbCalculatedGrossPay.Location = new System.Drawing.Point(186, 134);
+            this.tbCalculatedGrossPay.Name = "tbCalculatedGrossPay";
+            this.tbCalculatedGrossPay.ReadOnly = true;
+            this.tbCalculatedGrossPay.Size = new System.Drawing.Size(132, 22);
+            this.tbCalculatedGrossPay.TabIndex = 7;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(395, 226);
+            this.ClientSize = new System.Drawing.Size(381, 287);
+            this.Controls.Add(this.tbCalculatedGrossPay);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnCalculateGrossPay);
@@ -134,6 +155,8 @@
         private System.Windows.Forms.Button btnCalculateGrossPay;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox tbCalculatedGrossPay;
     }
 }
 

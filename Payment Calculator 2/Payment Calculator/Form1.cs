@@ -13,11 +13,10 @@ namespace Payment_Calculator
         {
             try
             {
-                //Calculate gross pay when user enters numeric value into text box
+                /*Calculate gross pay when user enters numeric value into text box*/
                 decimal grossPay = decimal.Parse(tbHourlyPayRate.Text) *
                     decimal.Parse(tbHoursWorked.Text);
-                MessageBox.Show("Gross Pay = " + grossPay.ToString("c"),
-                    "Wage Calculator");
+                tbCalculatedGrossPay.Text= grossPay.ToString("c");
             }
             catch
             {
@@ -25,13 +24,13 @@ namespace Payment_Calculator
                 MessageBox.Show("Warning: Data must be in numeric form.");
             }
         }
-
         private void btnClear_Click(object sender, EventArgs e)
         {
             //Clear textboxes for wage calculator
             //String.Empty; - Provides similar results
             tbHourlyPayRate.Text = "";
             tbHoursWorked.Text = "";
+            tbCalculatedGrossPay.Text = "";
         }
         private void btnExit_Click(object sender, EventArgs e)
         {
