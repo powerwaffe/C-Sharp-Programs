@@ -56,7 +56,8 @@ namespace Calorie_Counter
 
         private void button1_Click(object sender, EventArgs e)
         {
-            lbCalories.Text = "0";
+            total = 0;
+            lbCalories.Text = total.ToString();
         }
 
         private void button2_Click(object sender, EventArgs e)
