@@ -94,7 +94,7 @@
             // lbCalories
             // 
             this.lbCalories.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbCalories.Location = new System.Drawing.Point(305, 44);
+            this.lbCalories.Location = new System.Drawing.Point(304, 43);
             this.lbCalories.Name = "lbCalories";
             this.lbCalories.Size = new System.Drawing.Size(100, 23);
             this.lbCalories.TabIndex = 5;
