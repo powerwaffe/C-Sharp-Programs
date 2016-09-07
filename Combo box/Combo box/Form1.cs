@@ -19,7 +19,17 @@ namespace Combo_box
 
         private void cbDropDown_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
+            lbDisplay.Text = cbDropDown.Text;
+        }
+
+        private void cbDropDownSimple_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lbDisplay.Text = cbDropDownSimple.Text;
+        }
+
+        private void cbDropDownList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lbDisplay.Text = cbDropDownList.Text;
         }
     }
 }
