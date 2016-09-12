@@ -73,6 +73,7 @@
             this.lblDisplay.Name = "lblDisplay";
             this.lblDisplay.Size = new System.Drawing.Size(260, 18);
             this.lblDisplay.TabIndex = 3;
+            this.lblDisplay.Click += new System.EventHandler(this.lblDisplay_Click);
             // 
             // Form1
             // 

@@ -24,7 +24,7 @@ namespace Ice_Cream
 
                 //Open the data file for reading
                 StreamReader inputFile = File.OpenText("flavors.txt");
-
+      
                 //Read all the lines in the file
                 while (!inputFile.EndOfStream)
                 {
@@ -39,26 +39,35 @@ namespace Ice_Cream
 
                 //Display the number of flavors
                 lblFlavors.Text = lbxFlavors.Items.Count + " flavors available today";
-            }
+            } //end try
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Ice Cream Shop",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Close();
-            }
-
-
-           /* lbxFlavors.Items.Add("Vanilla");
-            lbxFlavors.Items.Add("Chocolate");
-            lbxFlavors.Items.Add("Strawberry");
-            lbxFlavors.Items.Add("Fear Sundae");
-            lbxFlavors.Items.Add("Denim");
-            lbxFlavors.Items.Add("Mango");*/
+            } //end catch
         }
 
         private void lbxFlavors_SelectedIndexChanged(object sender, EventArgs e)
         {
             lblDisplay.Text = lbxFlavors.SelectedItem.ToString();
+           
+            //Write selections to file
+            StreamWriter outputFile;
+
+            //Create a file and get a streamWriter object
+            outputFile = File.AppendText("FlavorChoice.txt");
+
+            //Write flavor to file
+            outputFile.WriteLine(lblDisplay.Text, " selected.");
+
+            //Close output file
+            outputFile.Close();
+        }
+
+        private void lblDisplay_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
