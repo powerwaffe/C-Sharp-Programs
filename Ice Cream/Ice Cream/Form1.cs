@@ -51,7 +51,8 @@ namespace Ice_Cream
         private void lbxFlavors_SelectedIndexChanged(object sender, EventArgs e)
         {
             lblDisplay.Text = lbxFlavors.SelectedItem.ToString();
-           
+            DateTime.Now.ToString("yyyyMMddHHmmssfff");
+
             //Write selections to file
             StreamWriter outputFile;
 
@@ -59,7 +60,7 @@ namespace Ice_Cream
             outputFile = File.AppendText("FlavorChoice.txt");
 
             //Write flavor to file
-            outputFile.WriteLine(lblDisplay.Text, " selected.");
+            outputFile.WriteLine(lblDisplay.Text + DateTime.Now.ToString(" yyyy/MM/dd HH:mm:ss"));
 
             //Close output file
             outputFile.Close();
