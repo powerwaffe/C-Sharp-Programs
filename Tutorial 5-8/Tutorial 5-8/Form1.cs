@@ -55,12 +55,6 @@ namespace Tutorial_5_8
             // Display 
             tbxPercentOfHeads.Text = headsPercent.ToString("#.##");
             tbxPercentOfTails.Text = tailsPercent.ToString("#.##");
-            
-        }
-
-        private void tbxNumOfHeads_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

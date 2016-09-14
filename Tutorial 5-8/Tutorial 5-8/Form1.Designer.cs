@@ -118,7 +118,6 @@
             this.tbxNumOfHeads.ReadOnly = true;
             this.tbxNumOfHeads.Size = new System.Drawing.Size(100, 20);
             this.tbxNumOfHeads.TabIndex = 7;
-            this.tbxNumOfHeads.TextChanged += new System.EventHandler(this.tbxNumOfHeads_TextChanged);
             // 
             // tbxPercentOfHeads
             // 
