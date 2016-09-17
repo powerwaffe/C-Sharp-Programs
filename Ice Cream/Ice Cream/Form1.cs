@@ -45,30 +45,28 @@ namespace Ice_Cream
                 MessageBox.Show(ex.Message, "Ice Cream Shop",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Close();
-            } //end catch
+            } // end catch
         }
 
         private void lbxFlavors_SelectedIndexChanged(object sender, EventArgs e)
         {
             lblDisplay.Text = lbxFlavors.SelectedItem.ToString();
+
+            // Create DateTime object for time format
             DateTime.Now.ToString("yyyyMMddHHmmssfff");
 
-            //Write selections to file
+            // Write selections to file
             StreamWriter outputFile;
 
-            //Create a file and get a streamWriter object
+            // Create a file and get a streamWriter object
             outputFile = File.AppendText("FlavorChoice.txt");
 
             //Write flavor to file
-            outputFile.WriteLine(lblDisplay.Text + DateTime.Now.ToString(" yyyy/MM/dd HH:mm:ss"));
+            outputFile.WriteLine(lblDisplay.Text + " - " + 
+                DateTime.Now.ToString("HH:mm:ss MM/dd/yyyy"));
 
             //Close output file
             outputFile.Close();
-        }
-
-        private void lblDisplay_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
