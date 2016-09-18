@@ -82,21 +82,21 @@
             this.tbxTest1.Location = new System.Drawing.Point(136, 32);
             this.tbxTest1.Name = "tbxTest1";
             this.tbxTest1.Size = new System.Drawing.Size(127, 22);
-            this.tbxTest1.TabIndex = 4;
+            this.tbxTest1.TabIndex = 0;
             // 
             // tbxTest2
             // 
             this.tbxTest2.Location = new System.Drawing.Point(136, 66);
             this.tbxTest2.Name = "tbxTest2";
             this.tbxTest2.Size = new System.Drawing.Size(127, 22);
-            this.tbxTest2.TabIndex = 5;
+            this.tbxTest2.TabIndex = 1;
             // 
             // tbxTest3
             // 
             this.tbxTest3.Location = new System.Drawing.Point(136, 100);
             this.tbxTest3.Name = "tbxTest3";
             this.tbxTest3.Size = new System.Drawing.Size(127, 22);
-            this.tbxTest3.TabIndex = 6;
+            this.tbxTest3.TabIndex = 3;
             // 
             // lblAverage
             // 

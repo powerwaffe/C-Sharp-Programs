@@ -21,6 +21,9 @@ namespace Test_Average
         {
             try
             {
+                // Declare constant that cant change
+                const double HIGH_SCORE = 95.0;
+
                 // Variables to hold test scores and average
                 double test1, test2, test3, average;
 
@@ -36,6 +39,13 @@ namespace Test_Average
                 // Display the average test score with the output rounded
                 // to 1 decimal point
                 lblAverage.Text = average.ToString("n1");
+
+                // If the average is a high score congratualte the
+                // user with a message box
+                if (average > HIGH_SCORE)
+                {
+                    MessageBox.Show("Congratulations, you have a high score!");
+                }
             }
             catch (Exception ex)
             {
