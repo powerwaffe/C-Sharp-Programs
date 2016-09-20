@@ -9,7 +9,7 @@ namespace Exam1_Ticket_Sales
     {
         int ticketAdult, ticketChild, ticketSenior;
         double ticketBasePrice, adultBase, childBase, seniorBase;
-        double total;
+        double total = 0;
 
         private void btnIncrementAdult_Click(object sender, EventArgs e)
         {
@@ -17,7 +17,7 @@ namespace Exam1_Ticket_Sales
                 ticketAdult++;
             tbxAdultTicketCount.Text = ticketAdult.ToString();
             double adultBase = double.Parse(tbxBaseTicketPrice.Text) * ticketAdult;
-            total += adultBase;
+            total += adultBase / ticketAdult;
             tbxDisplayAdultBase.Text = adultBase.ToString();
             tbxSubtotal.Text = total.ToString();
         }
@@ -40,13 +40,12 @@ namespace Exam1_Ticket_Sales
         private void btnIncrementChild_Click(object sender, EventArgs e)
         {
             if (int.Parse(tbxChildTicketCount.Text) < 6)
-            { 
                 ticketChild++;
-                tbxChildTicketCount.Text = ticketChild.ToString();
-            }
+
+            tbxChildTicketCount.Text = ticketChild.ToString();
             double childDiscount = double.Parse(tbxBaseTicketPrice.Text) * 50 / 100;
             double childBase = (double.Parse(tbxBaseTicketPrice.Text) * ticketChild) / 2;
-            total += childBase;
+            total += childBase / ticketChild;
             tbxDisplayChildBase.Text = childBase.ToString();
             tbxSubtotal.Text = total.ToString();
         }
@@ -54,15 +53,16 @@ namespace Exam1_Ticket_Sales
         private void btnIncrementSenior_Click(object sender, EventArgs e)
         {
             if (int.Parse(tbxSeniorTicketCount.Text) < 6)
-            {
                 ticketSenior++;
-                tbxSeniorTicketCount.Text = ticketSenior.ToString();
-            }
-           // Did not finish senior percantage display
-            double seniorBase = (double.Parse(tbxBaseTicketPrice.Text));
-            total += seniorBase;
+
+            tbxSeniorTicketCount.Text = ticketSenior.ToString();
+            double seniorDiscount = (double.Parse(tbxBaseTicketPrice.Text) * ticketSenior) * .25;
+            double seniorBase = (double.Parse(tbxBaseTicketPrice.Text) * ticketSenior) - seniorDiscount;
+            total += seniorBase / ticketSenior;
             tbxDisplaySeniorBase.Text = seniorBase.ToString();
             tbxSubtotal.Text = total.ToString();
+
+
         }
 
         private void tbxBaseTicketPrice_TextChanged(object sender, EventArgs e)
