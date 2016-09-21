@@ -58,55 +58,59 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(53, 30);
+            this.label1.Location = new System.Drawing.Point(71, 37);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 13);
+            this.label1.Size = new System.Drawing.Size(118, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Base Ticket Price";
             // 
             // tbxBaseTicketPrice
             // 
-            this.tbxBaseTicketPrice.Location = new System.Drawing.Point(150, 27);
+            this.tbxBaseTicketPrice.Location = new System.Drawing.Point(200, 33);
+            this.tbxBaseTicketPrice.Margin = new System.Windows.Forms.Padding(4);
             this.tbxBaseTicketPrice.Name = "tbxBaseTicketPrice";
-            this.tbxBaseTicketPrice.Size = new System.Drawing.Size(100, 20);
+            this.tbxBaseTicketPrice.Size = new System.Drawing.Size(132, 22);
             this.tbxBaseTicketPrice.TabIndex = 1;
-            this.tbxBaseTicketPrice.Text = "0";
             this.tbxBaseTicketPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.tbxBaseTicketPrice.TextChanged += new System.EventHandler(this.tbxBaseTicketPrice_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 67);
+            this.label2.Location = new System.Drawing.Point(12, 83);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 13);
+            this.label2.Size = new System.Drawing.Size(86, 17);
             this.label2.TabIndex = 2;
             this.label2.Text = "Adult (Base)";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 101);
+            this.label3.Location = new System.Drawing.Point(12, 136);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(104, 13);
+            this.label3.Size = new System.Drawing.Size(140, 17);
             this.label3.TabIndex = 3;
             this.label3.Text = "Child (50% Discount)";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 147);
+            this.label4.Location = new System.Drawing.Point(12, 187);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(111, 13);
+            this.label4.Size = new System.Drawing.Size(150, 17);
             this.label4.TabIndex = 4;
             this.label4.Text = "Senior (25% Discount)";
             // 
             // btnDecrementAdult
             // 
             this.btnDecrementAdult.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDecrementAdult.Location = new System.Drawing.Point(179, 56);
+            this.btnDecrementAdult.Location = new System.Drawing.Point(239, 69);
+            this.btnDecrementAdult.Margin = new System.Windows.Forms.Padding(4);
             this.btnDecrementAdult.Name = "btnDecrementAdult";
-            this.btnDecrementAdult.Size = new System.Drawing.Size(37, 33);
+            this.btnDecrementAdult.Size = new System.Drawing.Size(49, 41);
             this.btnDecrementAdult.TabIndex = 5;
             this.btnDecrementAdult.Text = "-";
             this.btnDecrementAdult.UseVisualStyleBackColor = true;
@@ -115,9 +119,10 @@
             // tbxAdultTicketCount
             // 
             this.tbxAdultTicketCount.Enabled = false;
-            this.tbxAdultTicketCount.Location = new System.Drawing.Point(223, 59);
+            this.tbxAdultTicketCount.Location = new System.Drawing.Point(298, 80);
+            this.tbxAdultTicketCount.Margin = new System.Windows.Forms.Padding(4);
             this.tbxAdultTicketCount.Name = "tbxAdultTicketCount";
-            this.tbxAdultTicketCount.Size = new System.Drawing.Size(27, 20);
+            this.tbxAdultTicketCount.Size = new System.Drawing.Size(35, 22);
             this.tbxAdultTicketCount.TabIndex = 6;
             this.tbxAdultTicketCount.Text = "0";
             this.tbxAdultTicketCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -125,9 +130,10 @@
             // btnIncrementAdult
             // 
             this.btnIncrementAdult.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIncrementAdult.Location = new System.Drawing.Point(256, 56);
+            this.btnIncrementAdult.Location = new System.Drawing.Point(341, 69);
+            this.btnIncrementAdult.Margin = new System.Windows.Forms.Padding(4);
             this.btnIncrementAdult.Name = "btnIncrementAdult";
-            this.btnIncrementAdult.Size = new System.Drawing.Size(36, 34);
+            this.btnIncrementAdult.Size = new System.Drawing.Size(48, 42);
             this.btnIncrementAdult.TabIndex = 7;
             this.btnIncrementAdult.Text = "+";
             this.btnIncrementAdult.UseVisualStyleBackColor = true;
@@ -136,9 +142,10 @@
             // tbxDisplayAdultBase
             // 
             this.tbxDisplayAdultBase.Enabled = false;
-            this.tbxDisplayAdultBase.Location = new System.Drawing.Point(324, 63);
+            this.tbxDisplayAdultBase.Location = new System.Drawing.Point(432, 78);
+            this.tbxDisplayAdultBase.Margin = new System.Windows.Forms.Padding(4);
             this.tbxDisplayAdultBase.Name = "tbxDisplayAdultBase";
-            this.tbxDisplayAdultBase.Size = new System.Drawing.Size(100, 20);
+            this.tbxDisplayAdultBase.Size = new System.Drawing.Size(132, 22);
             this.tbxDisplayAdultBase.TabIndex = 8;
             this.tbxDisplayAdultBase.Text = "0";
             this.tbxDisplayAdultBase.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -146,9 +153,10 @@
             // btnDecrementChild
             // 
             this.btnDecrementChild.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDecrementChild.Location = new System.Drawing.Point(179, 101);
+            this.btnDecrementChild.Location = new System.Drawing.Point(239, 122);
+            this.btnDecrementChild.Margin = new System.Windows.Forms.Padding(4);
             this.btnDecrementChild.Name = "btnDecrementChild";
-            this.btnDecrementChild.Size = new System.Drawing.Size(37, 30);
+            this.btnDecrementChild.Size = new System.Drawing.Size(49, 42);
             this.btnDecrementChild.TabIndex = 9;
             this.btnDecrementChild.Text = "-";
             this.btnDecrementChild.UseVisualStyleBackColor = true;
@@ -157,9 +165,10 @@
             // btnIncrementChild
             // 
             this.btnIncrementChild.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIncrementChild.Location = new System.Drawing.Point(256, 99);
+            this.btnIncrementChild.Location = new System.Drawing.Point(341, 122);
+            this.btnIncrementChild.Margin = new System.Windows.Forms.Padding(4);
             this.btnIncrementChild.Name = "btnIncrementChild";
-            this.btnIncrementChild.Size = new System.Drawing.Size(37, 34);
+            this.btnIncrementChild.Size = new System.Drawing.Size(49, 42);
             this.btnIncrementChild.TabIndex = 10;
             this.btnIncrementChild.Text = "+";
             this.btnIncrementChild.UseVisualStyleBackColor = true;
@@ -168,9 +177,10 @@
             // tbxChildTicketCount
             // 
             this.tbxChildTicketCount.Enabled = false;
-            this.tbxChildTicketCount.Location = new System.Drawing.Point(222, 107);
+            this.tbxChildTicketCount.Location = new System.Drawing.Point(296, 132);
+            this.tbxChildTicketCount.Margin = new System.Windows.Forms.Padding(4);
             this.tbxChildTicketCount.Name = "tbxChildTicketCount";
-            this.tbxChildTicketCount.Size = new System.Drawing.Size(28, 20);
+            this.tbxChildTicketCount.Size = new System.Drawing.Size(36, 22);
             this.tbxChildTicketCount.TabIndex = 11;
             this.tbxChildTicketCount.Text = "0";
             this.tbxChildTicketCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -178,9 +188,10 @@
             // tbxDisplayChildBase
             // 
             this.tbxDisplayChildBase.Enabled = false;
-            this.tbxDisplayChildBase.Location = new System.Drawing.Point(324, 107);
+            this.tbxDisplayChildBase.Location = new System.Drawing.Point(432, 132);
+            this.tbxDisplayChildBase.Margin = new System.Windows.Forms.Padding(4);
             this.tbxDisplayChildBase.Name = "tbxDisplayChildBase";
-            this.tbxDisplayChildBase.Size = new System.Drawing.Size(100, 20);
+            this.tbxDisplayChildBase.Size = new System.Drawing.Size(132, 22);
             this.tbxDisplayChildBase.TabIndex = 12;
             this.tbxDisplayChildBase.Text = "0";
             this.tbxDisplayChildBase.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -188,9 +199,10 @@
             // btnDecrementSenior
             // 
             this.btnDecrementSenior.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDecrementSenior.Location = new System.Drawing.Point(179, 141);
+            this.btnDecrementSenior.Location = new System.Drawing.Point(239, 173);
+            this.btnDecrementSenior.Margin = new System.Windows.Forms.Padding(4);
             this.btnDecrementSenior.Name = "btnDecrementSenior";
-            this.btnDecrementSenior.Size = new System.Drawing.Size(37, 32);
+            this.btnDecrementSenior.Size = new System.Drawing.Size(49, 42);
             this.btnDecrementSenior.TabIndex = 13;
             this.btnDecrementSenior.Text = "-";
             this.btnDecrementSenior.UseVisualStyleBackColor = true;
@@ -199,9 +211,10 @@
             // tbxSeniorTicketCount
             // 
             this.tbxSeniorTicketCount.Enabled = false;
-            this.tbxSeniorTicketCount.Location = new System.Drawing.Point(222, 148);
+            this.tbxSeniorTicketCount.Location = new System.Drawing.Point(296, 182);
+            this.tbxSeniorTicketCount.Margin = new System.Windows.Forms.Padding(4);
             this.tbxSeniorTicketCount.Name = "tbxSeniorTicketCount";
-            this.tbxSeniorTicketCount.Size = new System.Drawing.Size(28, 20);
+            this.tbxSeniorTicketCount.Size = new System.Drawing.Size(36, 22);
             this.tbxSeniorTicketCount.TabIndex = 14;
             this.tbxSeniorTicketCount.Text = "0";
             this.tbxSeniorTicketCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -209,9 +222,10 @@
             // btnIncrementSenior
             // 
             this.btnIncrementSenior.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIncrementSenior.Location = new System.Drawing.Point(255, 141);
+            this.btnIncrementSenior.Location = new System.Drawing.Point(340, 174);
+            this.btnIncrementSenior.Margin = new System.Windows.Forms.Padding(4);
             this.btnIncrementSenior.Name = "btnIncrementSenior";
-            this.btnIncrementSenior.Size = new System.Drawing.Size(37, 33);
+            this.btnIncrementSenior.Size = new System.Drawing.Size(49, 41);
             this.btnIncrementSenior.TabIndex = 15;
             this.btnIncrementSenior.Text = "+";
             this.btnIncrementSenior.UseVisualStyleBackColor = true;
@@ -220,9 +234,10 @@
             // tbxDisplaySeniorBase
             // 
             this.tbxDisplaySeniorBase.Enabled = false;
-            this.tbxDisplaySeniorBase.Location = new System.Drawing.Point(324, 148);
+            this.tbxDisplaySeniorBase.Location = new System.Drawing.Point(432, 182);
+            this.tbxDisplaySeniorBase.Margin = new System.Windows.Forms.Padding(4);
             this.tbxDisplaySeniorBase.Name = "tbxDisplaySeniorBase";
-            this.tbxDisplaySeniorBase.Size = new System.Drawing.Size(100, 20);
+            this.tbxDisplaySeniorBase.Size = new System.Drawing.Size(132, 22);
             this.tbxDisplaySeniorBase.TabIndex = 16;
             this.tbxDisplaySeniorBase.Text = "0";
             this.tbxDisplaySeniorBase.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -230,46 +245,53 @@
             // tbxSubtotal
             // 
             this.tbxSubtotal.Enabled = false;
-            this.tbxSubtotal.Location = new System.Drawing.Point(324, 188);
+            this.tbxSubtotal.Location = new System.Drawing.Point(432, 231);
+            this.tbxSubtotal.Margin = new System.Windows.Forms.Padding(4);
             this.tbxSubtotal.Name = "tbxSubtotal";
-            this.tbxSubtotal.Size = new System.Drawing.Size(100, 20);
+            this.tbxSubtotal.Size = new System.Drawing.Size(132, 22);
             this.tbxSubtotal.TabIndex = 17;
             this.tbxSubtotal.Text = "0";
-            this.tbxSubtotal.TextChanged += new System.EventHandler(this.tbxSubtotal_TextChanged);
+            this.tbxSubtotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // tbxTaxedSubtotal
             // 
             this.tbxTaxedSubtotal.Enabled = false;
-            this.tbxTaxedSubtotal.Location = new System.Drawing.Point(324, 225);
+            this.tbxTaxedSubtotal.Location = new System.Drawing.Point(432, 277);
+            this.tbxTaxedSubtotal.Margin = new System.Windows.Forms.Padding(4);
             this.tbxTaxedSubtotal.Name = "tbxTaxedSubtotal";
-            this.tbxTaxedSubtotal.Size = new System.Drawing.Size(100, 20);
+            this.tbxTaxedSubtotal.Size = new System.Drawing.Size(132, 22);
             this.tbxTaxedSubtotal.TabIndex = 18;
             this.tbxTaxedSubtotal.Text = "0";
+            this.tbxTaxedSubtotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // tbxTotal
             // 
             this.tbxTotal.Enabled = false;
-            this.tbxTotal.Location = new System.Drawing.Point(324, 261);
+            this.tbxTotal.Location = new System.Drawing.Point(432, 321);
+            this.tbxTotal.Margin = new System.Windows.Forms.Padding(4);
             this.tbxTotal.Name = "tbxTotal";
-            this.tbxTotal.Size = new System.Drawing.Size(100, 20);
+            this.tbxTotal.Size = new System.Drawing.Size(132, 22);
             this.tbxTotal.TabIndex = 19;
             this.tbxTotal.Text = "0";
+            this.tbxTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(253, 191);
+            this.label5.Location = new System.Drawing.Point(337, 235);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 13);
+            this.label5.Size = new System.Drawing.Size(60, 17);
             this.label5.TabIndex = 20;
             this.label5.Text = "Subtotal";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(253, 228);
+            this.label6.Location = new System.Drawing.Point(337, 281);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(48, 13);
+            this.label6.Size = new System.Drawing.Size(65, 17);
             this.label6.TabIndex = 21;
             this.label6.Text = "Tax (6%)";
             // 
@@ -277,17 +299,19 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(257, 264);
+            this.label7.Location = new System.Drawing.Point(343, 325);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(36, 13);
+            this.label7.Size = new System.Drawing.Size(45, 17);
             this.label7.TabIndex = 22;
             this.label7.Text = "Total";
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(19, 289);
+            this.btnClear.Location = new System.Drawing.Point(25, 356);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(4);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(75, 36);
+            this.btnClear.Size = new System.Drawing.Size(100, 44);
             this.btnClear.TabIndex = 23;
             this.btnClear.Text = "CLEAR";
             this.btnClear.UseVisualStyleBackColor = true;
@@ -295,9 +319,10 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(165, 289);
+            this.btnExit.Location = new System.Drawing.Point(220, 356);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(75, 36);
+            this.btnExit.Size = new System.Drawing.Size(100, 44);
             this.btnExit.TabIndex = 24;
             this.btnExit.Text = "EXIT";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -305,9 +330,9 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(489, 337);
+            this.ClientSize = new System.Drawing.Size(652, 415);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.label7);
@@ -333,6 +358,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tbxBaseTicketPrice);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Chiller Theater Ticket Sales";
             this.ResumeLayout(false);
