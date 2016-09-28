@@ -17,7 +17,7 @@ namespace Chapter_6_2_Assignment
 
             if (isInputValid(ref grade1, ref grade2))
             {
-                // Calculate and print to text box
+                // Calculate and print average to text box
                 average = (grade1 + grade2) / 2;
                 tbxAverage.Text = average.ToString("#.##");
             }
