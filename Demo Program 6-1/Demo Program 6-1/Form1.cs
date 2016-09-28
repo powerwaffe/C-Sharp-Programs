@@ -21,7 +21,7 @@ namespace Demo_Program_6_1
         {
             if (isInputValid())
             {
-                MessageBox.Show("Got valid inpute", "Average", MessageBoxButtons.OK,
+                MessageBox.Show("Got valid input", "Average", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
             }
         }
