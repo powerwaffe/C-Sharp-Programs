@@ -3,6 +3,7 @@ using System.Windows.Forms;
 
 namespace Dorm_and_Meal_Plan_Calculator
 {
+    // enum values to be used for calculations
     enum Dorm
     {
         allen = 1500, pike = 1600, farthing = 1800,
