@@ -12,6 +12,10 @@ namespace Dorm_and_Meal_Plan_Calculator
     }
     public partial class frmDormAndMealPlans : Form
     {
+        // Global variables
+        double total;
+        double value1 = 0, value2 = 0;
+
         public frmDormAndMealPlans()
         {
             InitializeComponent();
@@ -21,59 +25,61 @@ namespace Dorm_and_Meal_Plan_Calculator
         {
             // Create an instance of frmTotalCharges
             frmTotalCharges totalCharges = new frmTotalCharges();
-           
-            int counter = 0;
-            double value1, value2;
-            double total = 0;
-            while (counter < 2)
+
+            // Check what dormitory is selected
+            if (rbtAllenHall.Checked)
             {
-                if (rbtAllenHall.Checked)
-                {
-                    value1 = (double)Dorm.allen;
-                    total += value1;
-                    counter++;
-                }
-                else if (rbtPikeHall.Checked)
-                {
-                    value1 = (double)Dorm.pike;
-                    counter++;
-                }
-                else if (rbtFarthingHall.Checked)
-                {
-                    value1 = (double)Dorm.farthing;
-                    counter++;
-                }
-                else if (rbtUniversitySuite.Checked)
-                {
-                    value1 = (double)Dorm.universitySuites;
-                    counter++;
-                }
-                else if (rbt7MealsPerWeek.Checked)
-                {
-                    value2 = (double)Dorm.sevenMeals;
-                    counter++;
-                }
-                else if (rbt14MealsPerWeek.Checked)
-                {
-                    value2 = (double)Dorm.fourteenMeals;
-                    counter++;
-                }
-                else if (rbtUnlimitedMeals.Checked)
-                {
-                    value2 = (double)Dorm.unlimitedMeals;
-                    counter++;
-                }
+                value1 += (double)Dorm.allen;
+                total += value1;
             }
+            else if (rbtPikeHall.Checked)
+            {
+                value1 += (double)Dorm.pike;
+                total += value1;
+            }
+            else if (rbtFarthingHall.Checked)
+            {
+                value1 += (double)Dorm.farthing;
+                total += value1;
+            }
+            else if (rbtUniversitySuite.Checked)
+            {
+                value1 += (double)Dorm.universitySuites;
+                total += value1;
+            }
+
+            // Check what meal plan is selected
+            if (rbt7MealsPerWeek.Checked)
+            {
+                value2 += (double)Dorm.sevenMeals;
+                total = value1 + value2;
+            }
+            else if (rbt14MealsPerWeek.Checked)
+            {
+                value2 += (double)Dorm.fourteenMeals;
+                total = value1 + value2;
+            }
+            else if (rbtUnlimitedMeals.Checked)
+            {
+                value2 += (double)Dorm.unlimitedMeals;
+                total = value1 + value2;
+            }
+
+            // Set label in frmTotalCharges to total's value
+            totalCharges.lblTotalCharges.Text = total.ToString();
+
+            // Display frmTotalCharges
             totalCharges.ShowDialog();
+
+            // Set all values to 0 after form finishes executing
+            total = 0;
+            value1 = 0;
+            value2 = 0;
         }
 
-        private void Dormitories_CheckedChanged(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
-            if (((RadioButton)sender).Checked)
-            {
-                RadioButton rb1 = (RadioButton)sender;
-            }
-
+            Close();
         }
     }
 }

@@ -12,7 +12,7 @@ namespace Dorm_and_Meal_Plan_Calculator
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-
+            Close();
         }
     }
 }
