@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace shapes
 {
@@ -12,6 +8,7 @@ namespace shapes
         private double _hypotenuse;
         private double _area;
         private double _perimeter;
+        private int _count;
 
         // Constructor
         public Shape()
@@ -19,6 +16,7 @@ namespace shapes
             _hypotenuse = 0;
             _area = 0;
             _perimeter = 0;
+            _count = 0;
         }
 
         public double Hypotenuse{ get; set; }
@@ -27,11 +25,15 @@ namespace shapes
 
         public double Perimeter{ get; set; }
 
+        public double Count { get; set; }
+
         // ToString override
         public override string ToString()
         {
-            return "Hypotenuse: " + Hypotenuse + " Area: " + Area +
-                " Perimeter: " + Perimeter;
+            return "Hypotenuse: " + decimal.Round((decimal)Hypotenuse, 
+                2, MidpointRounding.AwayFromZero) + " Area: " + decimal.Round((decimal)Area,
+                2, MidpointRounding.AwayFromZero) + " Perimeter: " + decimal.Round(
+                    (decimal)Perimeter, 2, MidpointRounding.AwayFromZero);
         }
     }
 }
