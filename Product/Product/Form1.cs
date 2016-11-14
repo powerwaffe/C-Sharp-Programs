@@ -34,6 +34,7 @@ namespace Product
 
         private void btnSortByPrice_Click(object sender, EventArgs e)
         {
+            // Flarp
             this.productTableAdapter.FillByPrice(this.productDBDataSet.Product);
         }
 
