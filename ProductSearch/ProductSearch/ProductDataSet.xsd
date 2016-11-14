@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="ProductDBDataSet" targetNamespace="http://tempuri.org/ProductDBDataSet.xsd" xmlns:mstns="http://tempuri.org/ProductDBDataSet.xsd" xmlns="http://tempuri.org/ProductDBDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="ProductDataSet" targetNamespace="http://tempuri.org/ProductDataSet.xsd" xmlns:mstns="http://tempuri.org/ProductDataSet.xsd" xmlns="http://tempuri.org/ProductDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ProductDBConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ProductDBConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Product.Properties.Settings.GlobalReference.Default.ProductDBConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ProductDBConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ProductDBConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ProductSearch.Properties.Settings.GlobalReference.Default.ProductDBConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ProductTableAdapter" GeneratorDataComponentClassName="ProductTableAdapter" Name="Product" UserDataComponentName="ProductTableAdapter">
@@ -64,27 +64,15 @@ SELECT Product_Number, Description, Units_On_Hand, Price FROM Product WHERE (Pro
               <Mapping SourceColumn="Price" DataSetColumn="Price" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="ProductDBConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="AveragePrice" Modifier="Public" Name="AveragePrice" QueryType="Scalar" ScalarCallRetval="System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="AveragePrice">
+              <DbSource ConnectionRef="ProductDBConnectionString (Settings)" DbObjectName="dbo.Product" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SearchDesc" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="SearchDesc" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="SearchDesc">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT AVG(Price) FROM Product</CommandText>
-                    <Parameters />
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-              <DbSource ConnectionRef="ProductDBConnectionString (Settings)" DbObjectName="dbo.Product" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByPrice" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillByPrice" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillByPrice">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT Product_Number, Description, Units_On_Hand, Price FROM dbo.Product Order By Price</CommandText>
-                    <Parameters />
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-              <DbSource ConnectionRef="ProductDBConnectionString (Settings)" DbObjectName="dbo.Product" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByUnits" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillByUnits" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillByUnits">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT Product_Number, Description, Units_On_Hand, Price FROM dbo.Product WHERE Units_On_Hand &gt; 100</CommandText>
-                    <Parameters />
+                    <CommandText>SELECT Product_Number, Description, Units_On_Hand, Price 
+FROM dbo.Product
+Where Description Like '%' + @value + '%'</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="value" ColumnName="Description" DataSourceName="[C:\USERS\SEAN\SOURCE\REPOS\C-SHARP-PROGRAMS\PRODUCTSEARCH\PRODUCTSEARCH\PRODUCTDB.MDF].dbo.Product" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@value" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
@@ -95,10 +83,10 @@ SELECT Product_Number, Description, Units_On_Hand, Price FROM Product WHERE (Pro
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="ProductDBDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="ProductDBDataSet" msprop:Generator_UserDSName="ProductDBDataSet">
+  <xs:element name="ProductDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="ProductDataSet" msprop:Generator_UserDSName="ProductDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Product" msprop:Generator_TableClassName="ProductDataTable" msprop:Generator_TableVarName="tableProduct" msprop:Generator_TablePropName="Product" msprop:Generator_RowDeletingName="ProductRowDeleting" msprop:Generator_RowChangingName="ProductRowChanging" msprop:Generator_RowEvHandlerName="ProductRowChangeEventHandler" msprop:Generator_RowDeletedName="ProductRowDeleted" msprop:Generator_UserTableName="Product" msprop:Generator_RowChangedName="ProductRowChanged" msprop:Generator_RowEvArgName="ProductRowChangeEvent" msprop:Generator_RowClassName="ProductRow">
+        <xs:element name="Product" msprop:Generator_TableClassName="ProductDataTable" msprop:Generator_TableVarName="tableProduct" msprop:Generator_RowChangedName="ProductRowChanged" msprop:Generator_TablePropName="Product" msprop:Generator_RowDeletingName="ProductRowDeleting" msprop:Generator_RowChangingName="ProductRowChanging" msprop:Generator_RowEvHandlerName="ProductRowChangeEventHandler" msprop:Generator_RowDeletedName="ProductRowDeleted" msprop:Generator_RowClassName="ProductRow" msprop:Generator_UserTableName="Product" msprop:Generator_RowEvArgName="ProductRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Product_Number" msprop:Generator_ColumnVarNameInTable="columnProduct_Number" msprop:Generator_ColumnPropNameInRow="Product_Number" msprop:Generator_ColumnPropNameInTable="Product_NumberColumn" msprop:Generator_UserColumnName="Product_Number">

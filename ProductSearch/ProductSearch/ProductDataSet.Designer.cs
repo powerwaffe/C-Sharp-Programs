@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace Product {
+namespace ProductSearch {
     
     
     /// <summary>
@@ -20,9 +20,9 @@ namespace Product {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("ProductDBDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("ProductDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class ProductDBDataSet : global::System.Data.DataSet {
+    public partial class ProductDataSet : global::System.Data.DataSet {
         
         private ProductDataTable tableProduct;
         
@@ -30,7 +30,7 @@ namespace Product {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public ProductDBDataSet() {
+        public ProductDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace Product {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected ProductDBDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected ProductDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace Product {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            ProductDBDataSet cln = ((ProductDBDataSet)(base.Clone()));
+            ProductDataSet cln = ((ProductDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace Product {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "ProductDBDataSet";
+            this.DataSetName = "ProductDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/ProductDBDataSet.xsd";
+            this.Namespace = "http://tempuri.org/ProductDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableProduct = new ProductDataTable();
@@ -225,7 +225,7 @@ namespace Product {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            ProductDBDataSet ds = new ProductDBDataSet();
+            ProductDataSet ds = new ProductDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -518,7 +518,7 @@ namespace Product {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                ProductDBDataSet ds = new ProductDBDataSet();
+                ProductDataSet ds = new ProductDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -671,7 +671,7 @@ namespace Product {
         }
     }
 }
-namespace Product.ProductDBDataSetTableAdapters {
+namespace ProductSearch.ProductDataSetTableAdapters {
     
     
     /// <summary>
@@ -838,38 +838,30 @@ SELECT Product_Number, Description, Units_On_Hand, Price FROM Product WHERE (Pro
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Product.Properties.Settings.Default.ProductDBConnectionString;
+            this._connection.ConnectionString = global::ProductSearch.Properties.Settings.Default.ProductDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[4];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT Product_Number, Description, Units_On_Hand, Price FROM dbo.Product";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT AVG(Price) FROM Product";
+            this._commandCollection[1].CommandText = "SELECT Product_Number, Description, Units_On_Hand, Price \r\nFROM dbo.Product\r\nWher" +
+                "e Description Like \'%\' + @value + \'%\'";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT Product_Number, Description, Units_On_Hand, Price FROM dbo.Product Order B" +
-                "y Price";
-            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "SELECT Product_Number, Description, Units_On_Hand, Price FROM dbo.Product WHERE U" +
-                "nits_On_Hand > 100";
-            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@value", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Description", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(ProductDBDataSet.ProductDataTable dataTable) {
+        public virtual int Fill(ProductDataSet.ProductDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -882,9 +874,9 @@ SELECT Product_Number, Description, Units_On_Hand, Price FROM Product WHERE (Pro
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual ProductDBDataSet.ProductDataTable GetData() {
+        public virtual ProductDataSet.ProductDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            ProductDBDataSet.ProductDataTable dataTable = new ProductDBDataSet.ProductDataTable();
+            ProductDataSet.ProductDataTable dataTable = new ProductDataSet.ProductDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -893,8 +885,14 @@ SELECT Product_Number, Description, Units_On_Hand, Price FROM Product WHERE (Pro
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillByPrice(ProductDBDataSet.ProductDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[2];
+        public virtual int SearchDesc(ProductDataSet.ProductDataTable dataTable, string value) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((value == null)) {
+                throw new global::System.ArgumentNullException("value");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(value));
+            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -905,27 +903,14 @@ SELECT Product_Number, Description, Units_On_Hand, Price FROM Product WHERE (Pro
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillByUnits(ProductDBDataSet.ProductDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[3];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(ProductDBDataSet.ProductDataTable dataTable) {
+        public virtual int Update(ProductDataSet.ProductDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(ProductDBDataSet dataSet) {
+        public virtual int Update(ProductDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Product");
         }
         
@@ -1070,34 +1055,6 @@ SELECT Product_Number, Description, Units_On_Hand, Price FROM Product WHERE (Pro
         public virtual int Update(string Description, int Units_On_Hand, decimal Price, string Original_Product_Number, string Original_Description, int Original_Units_On_Hand, decimal Original_Price) {
             return this.Update(Original_Product_Number, Description, Units_On_Hand, Price, Original_Product_Number, Original_Description, Original_Units_On_Hand, Original_Price);
         }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual global::System.Nullable<decimal> AveragePrice() {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
-            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
-            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                command.Connection.Open();
-            }
-            object returnValue;
-            try {
-                returnValue = command.ExecuteScalar();
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    command.Connection.Close();
-                }
-            }
-            if (((returnValue == null) 
-                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
-                return new global::System.Nullable<decimal>();
-            }
-            else {
-                return new global::System.Nullable<decimal>(((decimal)(returnValue)));
-            }
-        }
     }
     
     /// <summary>
@@ -1191,7 +1148,7 @@ SELECT Product_Number, Description, Units_On_Hand, Price FROM Product WHERE (Pro
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateUpdatedRows(ProductDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(ProductDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._productTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Product.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -1210,7 +1167,7 @@ SELECT Product_Number, Description, Units_On_Hand, Price FROM Product WHERE (Pro
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateInsertedRows(ProductDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(ProductDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._productTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Product.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -1228,7 +1185,7 @@ SELECT Product_Number, Description, Units_On_Hand, Price FROM Product WHERE (Pro
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateDeletedRows(ProductDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(ProductDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._productTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Product.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -1270,7 +1227,7 @@ SELECT Product_Number, Description, Units_On_Hand, Price FROM Product WHERE (Pro
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public virtual int UpdateAll(ProductDBDataSet dataSet) {
+        public virtual int UpdateAll(ProductDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
