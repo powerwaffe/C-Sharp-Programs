@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FC2CE147-3687-459B-BC5B-FB022D32F9FA}</ProjectGuid>
+    <ProjectGuid>{FBE3B9EA-80DB-478D-8737-3B954CC18B36}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Chapter11_Project1</RootNamespace>
-    <AssemblyName>Chapter11 Project1</AssemblyName>
+    <RootNamespace>Census_Project</RootNamespace>
+    <AssemblyName>Census Project</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -61,21 +61,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BookPublisherDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BookPublisherDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="BookPublisherDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BookPublisherDataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JoinDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JoinDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -91,27 +86,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="BookPublisherDataSet.xsc">
-      <DependentUpon>BookPublisherDataSet.xsd</DependentUpon>
+    <None Include="JoinDataSet.xsc">
+      <DependentUpon>JoinDataSet.xsd</DependentUpon>
     </None>
-    <None Include="BookPublisherDataSet.xsd">
+    <None Include="JoinDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BookPublisherDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>JoinDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="BookPublisherDataSet.xss">
-      <DependentUpon>BookPublisherDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="BookPublisherDataSet1.xsc">
-      <DependentUpon>BookPublisherDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="BookPublisherDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BookPublisherDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="BookPublisherDataSet1.xss">
-      <DependentUpon>BookPublisherDataSet1.xsd</DependentUpon>
+    <None Include="JoinDataSet.xss">
+      <DependentUpon>JoinDataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -127,12 +111,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="BookPublisher.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    <Content Include="MyTownDB.mdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="BookPublisher_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>BookPublisher.mdf</DependentUpon>
+    <Content Include="MyTownDB_log.ldf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <DependentUpon>MyTownDB.mdf</DependentUpon>
     </Content>
   </ItemGroup>
   <ItemGroup>
