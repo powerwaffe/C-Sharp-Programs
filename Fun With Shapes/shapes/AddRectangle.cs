@@ -57,8 +57,8 @@ namespace shapes
         {
             foreach (Rectangle aShape in rectangleShape)
             {
-                return DateTime.Now.ToString("HH:mm:ss MM/dd/yyyy") + " - " +
-                     aShape.ToString();
+                string date = DateTime.Now.ToString("HH:mm:ss MM/dd/yyyy");
+                return aShape.ToString() + " - " + date;
             }
             return null;
         }

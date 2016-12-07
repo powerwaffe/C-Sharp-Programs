@@ -48,7 +48,7 @@
             this.tbpDetail = new System.Windows.Forms.TabPage();
             this.lbxListOfShapes = new System.Windows.Forms.ListBox();
             this.tbpSort = new System.Windows.Forms.TabPage();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lbxSortedShapes = new System.Windows.Forms.ListBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.rbtnSortByPerimeter = new System.Windows.Forms.RadioButton();
             this.rbtnSortByArea = new System.Windows.Forms.RadioButton();
@@ -69,19 +69,17 @@
             this.tabControl1.Controls.Add(this.tbpDetail);
             this.tabControl1.Controls.Add(this.tbpSort);
             this.tabControl1.Location = new System.Drawing.Point(-1, 0);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(452, 325);
+            this.tabControl1.Size = new System.Drawing.Size(505, 264);
             this.tabControl1.TabIndex = 0;
             // 
             // tbpCreate
             // 
             this.tbpCreate.Controls.Add(this.groupBox1);
-            this.tbpCreate.Location = new System.Drawing.Point(4, 25);
-            this.tbpCreate.Margin = new System.Windows.Forms.Padding(4);
+            this.tbpCreate.Location = new System.Drawing.Point(4, 22);
             this.tbpCreate.Name = "tbpCreate";
-            this.tbpCreate.Size = new System.Drawing.Size(444, 296);
+            this.tbpCreate.Size = new System.Drawing.Size(538, 238);
             this.tbpCreate.TabIndex = 0;
             this.tbpCreate.Text = "Create";
             this.tbpCreate.UseVisualStyleBackColor = true;
@@ -92,11 +90,9 @@
             this.groupBox1.Controls.Add(this.rbtnRectangle);
             this.groupBox1.Controls.Add(this.rbtnSquare);
             this.groupBox1.Controls.Add(this.rbtnRightTriangle);
-            this.groupBox1.Location = new System.Drawing.Point(83, 53);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Location = new System.Drawing.Point(62, 43);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(267, 181);
+            this.groupBox1.Size = new System.Drawing.Size(200, 147);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Choose a Shape to Create";
@@ -104,10 +100,9 @@
             // rbtnCircle
             // 
             this.rbtnCircle.AutoSize = true;
-            this.rbtnCircle.Location = new System.Drawing.Point(9, 113);
-            this.rbtnCircle.Margin = new System.Windows.Forms.Padding(4);
+            this.rbtnCircle.Location = new System.Drawing.Point(7, 92);
             this.rbtnCircle.Name = "rbtnCircle";
-            this.rbtnCircle.Size = new System.Drawing.Size(64, 21);
+            this.rbtnCircle.Size = new System.Drawing.Size(51, 17);
             this.rbtnCircle.TabIndex = 3;
             this.rbtnCircle.TabStop = true;
             this.rbtnCircle.Text = "&Circle";
@@ -117,10 +112,9 @@
             // rbtnRectangle
             // 
             this.rbtnRectangle.AutoSize = true;
-            this.rbtnRectangle.Location = new System.Drawing.Point(9, 84);
-            this.rbtnRectangle.Margin = new System.Windows.Forms.Padding(4);
+            this.rbtnRectangle.Location = new System.Drawing.Point(7, 68);
             this.rbtnRectangle.Name = "rbtnRectangle";
-            this.rbtnRectangle.Size = new System.Drawing.Size(93, 21);
+            this.rbtnRectangle.Size = new System.Drawing.Size(74, 17);
             this.rbtnRectangle.TabIndex = 2;
             this.rbtnRectangle.TabStop = true;
             this.rbtnRectangle.Text = "&Rectangle";
@@ -130,10 +124,9 @@
             // rbtnSquare
             // 
             this.rbtnSquare.AutoSize = true;
-            this.rbtnSquare.Location = new System.Drawing.Point(9, 54);
-            this.rbtnSquare.Margin = new System.Windows.Forms.Padding(4);
+            this.rbtnSquare.Location = new System.Drawing.Point(7, 44);
             this.rbtnSquare.Name = "rbtnSquare";
-            this.rbtnSquare.Size = new System.Drawing.Size(75, 21);
+            this.rbtnSquare.Size = new System.Drawing.Size(59, 17);
             this.rbtnSquare.TabIndex = 1;
             this.rbtnSquare.TabStop = true;
             this.rbtnSquare.Text = "&Square";
@@ -143,10 +136,9 @@
             // rbtnRightTriangle
             // 
             this.rbtnRightTriangle.AutoSize = true;
-            this.rbtnRightTriangle.Location = new System.Drawing.Point(9, 25);
-            this.rbtnRightTriangle.Margin = new System.Windows.Forms.Padding(4);
+            this.rbtnRightTriangle.Location = new System.Drawing.Point(7, 20);
             this.rbtnRightTriangle.Name = "rbtnRightTriangle";
-            this.rbtnRightTriangle.Size = new System.Drawing.Size(118, 21);
+            this.rbtnRightTriangle.Size = new System.Drawing.Size(91, 17);
             this.rbtnRightTriangle.TabIndex = 0;
             this.rbtnRightTriangle.TabStop = true;
             this.rbtnRightTriangle.Text = "Right &Triangle";
@@ -156,10 +148,9 @@
             // tbpSummary
             // 
             this.tbpSummary.Controls.Add(this.groupBox2);
-            this.tbpSummary.Location = new System.Drawing.Point(4, 25);
-            this.tbpSummary.Margin = new System.Windows.Forms.Padding(4);
+            this.tbpSummary.Location = new System.Drawing.Point(4, 22);
             this.tbpSummary.Name = "tbpSummary";
-            this.tbpSummary.Size = new System.Drawing.Size(444, 296);
+            this.tbpSummary.Size = new System.Drawing.Size(449, 237);
             this.tbpSummary.TabIndex = 1;
             this.tbpSummary.Text = "Summary";
             this.tbpSummary.UseVisualStyleBackColor = true;
@@ -174,11 +165,9 @@
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.lblCountRightTriangles);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Location = new System.Drawing.Point(95, 49);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Location = new System.Drawing.Point(71, 40);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(267, 167);
+            this.groupBox2.Size = new System.Drawing.Size(200, 136);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Inventory Summary";
@@ -186,20 +175,18 @@
             // lblCountCircles
             // 
             this.lblCountCircles.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblCountCircles.Location = new System.Drawing.Point(125, 121);
-            this.lblCountCircles.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCountCircles.Location = new System.Drawing.Point(94, 98);
             this.lblCountCircles.Name = "lblCountCircles";
-            this.lblCountCircles.Size = new System.Drawing.Size(53, 17);
+            this.lblCountCircles.Size = new System.Drawing.Size(40, 14);
             this.lblCountCircles.TabIndex = 7;
             this.lblCountCircles.Text = "0";
             this.lblCountCircles.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(9, 121);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(7, 98);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(107, 17);
+            this.label4.Size = new System.Drawing.Size(80, 14);
             this.label4.TabIndex = 6;
             this.label4.Text = "Circles";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -207,20 +194,18 @@
             // lblCountRectangles
             // 
             this.lblCountRectangles.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblCountRectangles.Location = new System.Drawing.Point(125, 89);
-            this.lblCountRectangles.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCountRectangles.Location = new System.Drawing.Point(94, 72);
             this.lblCountRectangles.Name = "lblCountRectangles";
-            this.lblCountRectangles.Size = new System.Drawing.Size(53, 17);
+            this.lblCountRectangles.Size = new System.Drawing.Size(40, 14);
             this.lblCountRectangles.TabIndex = 5;
             this.lblCountRectangles.Text = "0";
             this.lblCountRectangles.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(9, 89);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(7, 72);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(107, 17);
+            this.label3.Size = new System.Drawing.Size(80, 14);
             this.label3.TabIndex = 4;
             this.label3.Text = "Rectangle";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -228,20 +213,18 @@
             // lblCountSquares
             // 
             this.lblCountSquares.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblCountSquares.Location = new System.Drawing.Point(125, 55);
-            this.lblCountSquares.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCountSquares.Location = new System.Drawing.Point(94, 45);
             this.lblCountSquares.Name = "lblCountSquares";
-            this.lblCountSquares.Size = new System.Drawing.Size(53, 17);
+            this.lblCountSquares.Size = new System.Drawing.Size(40, 14);
             this.lblCountSquares.TabIndex = 3;
             this.lblCountSquares.Text = "0";
             this.lblCountSquares.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(9, 55);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(7, 45);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 17);
+            this.label2.Size = new System.Drawing.Size(80, 14);
             this.label2.TabIndex = 2;
             this.label2.Text = "Squares";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -249,20 +232,18 @@
             // lblCountRightTriangles
             // 
             this.lblCountRightTriangles.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblCountRightTriangles.Location = new System.Drawing.Point(125, 25);
-            this.lblCountRightTriangles.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCountRightTriangles.Location = new System.Drawing.Point(94, 20);
             this.lblCountRightTriangles.Name = "lblCountRightTriangles";
-            this.lblCountRightTriangles.Size = new System.Drawing.Size(53, 17);
+            this.lblCountRightTriangles.Size = new System.Drawing.Size(40, 14);
             this.lblCountRightTriangles.TabIndex = 1;
             this.lblCountRightTriangles.Text = "0";
             this.lblCountRightTriangles.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(9, 25);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(7, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 17);
+            this.label1.Size = new System.Drawing.Size(80, 14);
             this.label1.TabIndex = 0;
             this.label1.Text = "Right Triangles";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -270,10 +251,9 @@
             // tbpDetail
             // 
             this.tbpDetail.Controls.Add(this.lbxListOfShapes);
-            this.tbpDetail.Location = new System.Drawing.Point(4, 25);
-            this.tbpDetail.Margin = new System.Windows.Forms.Padding(4);
+            this.tbpDetail.Location = new System.Drawing.Point(4, 22);
             this.tbpDetail.Name = "tbpDetail";
-            this.tbpDetail.Size = new System.Drawing.Size(444, 296);
+            this.tbpDetail.Size = new System.Drawing.Size(497, 238);
             this.tbpDetail.TabIndex = 2;
             this.tbpDetail.Text = "Detail";
             this.tbpDetail.UseVisualStyleBackColor = true;
@@ -281,79 +261,72 @@
             // lbxListOfShapes
             // 
             this.lbxListOfShapes.FormattingEnabled = true;
-            this.lbxListOfShapes.ItemHeight = 16;
-            this.lbxListOfShapes.Location = new System.Drawing.Point(21, 22);
-            this.lbxListOfShapes.Margin = new System.Windows.Forms.Padding(4);
+            this.lbxListOfShapes.Location = new System.Drawing.Point(16, 18);
             this.lbxListOfShapes.Name = "lbxListOfShapes";
-            this.lbxListOfShapes.Size = new System.Drawing.Size(401, 244);
+            this.lbxListOfShapes.Size = new System.Drawing.Size(471, 199);
             this.lbxListOfShapes.Sorted = true;
             this.lbxListOfShapes.TabIndex = 0;
             // 
             // tbpSort
             // 
-            this.tbpSort.Controls.Add(this.listBox1);
+            this.tbpSort.Controls.Add(this.lbxSortedShapes);
             this.tbpSort.Controls.Add(this.panel1);
-            this.tbpSort.Location = new System.Drawing.Point(4, 25);
-            this.tbpSort.Margin = new System.Windows.Forms.Padding(4);
+            this.tbpSort.Location = new System.Drawing.Point(4, 22);
             this.tbpSort.Name = "tbpSort";
-            this.tbpSort.Size = new System.Drawing.Size(444, 296);
+            this.tbpSort.Size = new System.Drawing.Size(497, 238);
             this.tbpSort.TabIndex = 3;
             this.tbpSort.Text = "Sort";
             this.tbpSort.UseVisualStyleBackColor = true;
             // 
-            // listBox1
+            // lbxSortedShapes
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(219, 16);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(209, 244);
-            this.listBox1.TabIndex = 1;
+            this.lbxSortedShapes.FormattingEnabled = true;
+            this.lbxSortedShapes.Location = new System.Drawing.Point(143, 13);
+            this.lbxSortedShapes.Name = "lbxSortedShapes";
+            this.lbxSortedShapes.Size = new System.Drawing.Size(342, 212);
+            this.lbxSortedShapes.TabIndex = 1;
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.rbtnSortByPerimeter);
             this.panel1.Controls.Add(this.rbtnSortByArea);
-            this.panel1.Location = new System.Drawing.Point(12, 16);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(9, 13);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(170, 67);
+            this.panel1.Size = new System.Drawing.Size(128, 55);
             this.panel1.TabIndex = 0;
             // 
             // rbtnSortByPerimeter
             // 
             this.rbtnSortByPerimeter.AutoSize = true;
-            this.rbtnSortByPerimeter.Location = new System.Drawing.Point(5, 33);
-            this.rbtnSortByPerimeter.Margin = new System.Windows.Forms.Padding(4);
+            this.rbtnSortByPerimeter.Location = new System.Drawing.Point(4, 27);
             this.rbtnSortByPerimeter.Name = "rbtnSortByPerimeter";
-            this.rbtnSortByPerimeter.Size = new System.Drawing.Size(139, 21);
+            this.rbtnSortByPerimeter.Size = new System.Drawing.Size(104, 17);
             this.rbtnSortByPerimeter.TabIndex = 1;
             this.rbtnSortByPerimeter.TabStop = true;
-            this.rbtnSortByPerimeter.Text = "Sort by Perimeter";
+            this.rbtnSortByPerimeter.Text = "Sort Descending";
             this.rbtnSortByPerimeter.UseVisualStyleBackColor = true;
+            this.rbtnSortByPerimeter.CheckedChanged += new System.EventHandler(this.rbtnSortByPerimeter_CheckedChanged);
             // 
             // rbtnSortByArea
             // 
             this.rbtnSortByArea.AutoSize = true;
-            this.rbtnSortByArea.Location = new System.Drawing.Point(5, 5);
-            this.rbtnSortByArea.Margin = new System.Windows.Forms.Padding(4);
+            this.rbtnSortByArea.Location = new System.Drawing.Point(4, 4);
             this.rbtnSortByArea.Name = "rbtnSortByArea";
-            this.rbtnSortByArea.Size = new System.Drawing.Size(108, 21);
+            this.rbtnSortByArea.Size = new System.Drawing.Size(97, 17);
             this.rbtnSortByArea.TabIndex = 0;
             this.rbtnSortByArea.TabStop = true;
-            this.rbtnSortByArea.Text = "Sort by Area";
+            this.rbtnSortByArea.Text = "Sort Ascending";
             this.rbtnSortByArea.UseVisualStyleBackColor = true;
+            this.rbtnSortByArea.CheckedChanged += new System.EventHandler(this.rbtnSortByArea_CheckedChanged);
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(449, 325);
+            this.ClientSize = new System.Drawing.Size(502, 264);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "Main";
             this.Text = "Fun with Shapes";
@@ -394,7 +367,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.RadioButton rbtnSortByPerimeter;
         private System.Windows.Forms.RadioButton rbtnSortByArea;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox lbxSortedShapes;
         public System.Windows.Forms.ListBox lbxListOfShapes;
         public System.Windows.Forms.Label lblCountRightTriangles;
     }

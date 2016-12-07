@@ -65,8 +65,8 @@ namespace shapes
         {
             foreach (Circle aShape in circleShape)
             {
-                return DateTime.Now.ToString("HH:mm:ss MM/dd/yyyy") + " - " +
-                     aShape.ToString();
+                string date = DateTime.Now.ToString("HH:mm:ss MM/dd/yyyy");
+                return aShape.ToString() + " - " + date;
             }
             return null;
         }
