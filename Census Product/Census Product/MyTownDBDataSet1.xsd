@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="MyTownDBDataSet1" targetNamespace="http://tempuri.org/MyTownDBDataSet1.xsd" xmlns:mstns="http://tempuri.org/MyTownDBDataSet1.xsd" xmlns="http://tempuri.org/MyTownDBDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="MyTownDBConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="MyTownDBConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Census_Product.Properties.Settings.GlobalReference.Default.MyTownDBConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VacantViewTableAdapter" GeneratorDataComponentClassName="VacantViewTableAdapter" Name="VacantView" UserDataComponentName="VacantViewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="MyTownDBConnectionString (Settings)" DbObjectName="dbo.VacantView" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT [Street Number], City, State, Zip, Vacant FROM dbo.VacantView</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Street Number" DataSetColumn="Street Number" />
+              <Mapping SourceColumn="City" DataSetColumn="City" />
+              <Mapping SourceColumn="State" DataSetColumn="State" />
+              <Mapping SourceColumn="Zip" DataSetColumn="Zip" />
+              <Mapping SourceColumn="Vacant" DataSetColumn="Vacant" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="MyTownDBDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="MyTownDBDataSet1" msprop:Generator_UserDSName="MyTownDBDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="VacantView" msprop:Generator_TableClassName="VacantViewDataTable" msprop:Generator_TableVarName="tableVacantView" msprop:Generator_TablePropName="VacantView" msprop:Generator_RowDeletingName="VacantViewRowDeleting" msprop:Generator_RowChangingName="VacantViewRowChanging" msprop:Generator_RowEvHandlerName="VacantViewRowChangeEventHandler" msprop:Generator_RowDeletedName="VacantViewRowDeleted" msprop:Generator_UserTableName="VacantView" msprop:Generator_RowChangedName="VacantViewRowChanged" msprop:Generator_RowEvArgName="VacantViewRowChangeEvent" msprop:Generator_RowClassName="VacantViewRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Street_x0020_Number" msprop:Generator_ColumnVarNameInTable="columnStreet_Number" msprop:Generator_ColumnPropNameInRow="Street_Number" msprop:Generator_ColumnPropNameInTable="Street_NumberColumn" msprop:Generator_UserColumnName="Street Number">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="City" msprop:Generator_ColumnVarNameInTable="columnCity" msprop:Generator_ColumnPropNameInRow="City" msprop:Generator_ColumnPropNameInTable="CityColumn" msprop:Generator_UserColumnName="City">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="State" msprop:Generator_ColumnVarNameInTable="columnState" msprop:Generator_ColumnPropNameInRow="State" msprop:Generator_ColumnPropNameInTable="StateColumn" msprop:Generator_UserColumnName="State">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Zip" msprop:Generator_ColumnVarNameInTable="columnZip" msprop:Generator_ColumnPropNameInRow="Zip" msprop:Generator_ColumnPropNameInTable="ZipColumn" msprop:Generator_UserColumnName="Zip">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Vacant" msprop:Generator_ColumnVarNameInTable="columnVacant" msprop:Generator_ColumnPropNameInRow="Vacant" msprop:Generator_ColumnPropNameInTable="VacantColumn" msprop:Generator_UserColumnName="Vacant" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
