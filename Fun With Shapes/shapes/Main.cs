@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Windows.Forms;
-// Sorting method for area and perimeter not added. Increment doesnt
-// increment upon form leave. Multiple add clicks dont add multiple
-// entries.
+// Sorting method sorts by time created
 
 namespace shapes
 {

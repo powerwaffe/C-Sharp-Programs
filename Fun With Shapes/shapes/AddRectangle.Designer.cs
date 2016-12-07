@@ -52,7 +52,7 @@
             // 
             // lblPerimeter
             // 
-            this.lblPerimeter.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblPerimeter.BackColor = System.Drawing.SystemColors.ControlLight;
             this.lblPerimeter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblPerimeter.Location = new System.Drawing.Point(98, 131);
             this.lblPerimeter.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -73,7 +73,7 @@
             // 
             // lblArea
             // 
-            this.lblArea.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblArea.BackColor = System.Drawing.SystemColors.ControlLight;
             this.lblArea.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblArea.Location = new System.Drawing.Point(98, 84);
             this.lblArea.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);

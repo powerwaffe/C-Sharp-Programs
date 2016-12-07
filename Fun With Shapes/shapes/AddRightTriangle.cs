@@ -64,7 +64,7 @@ namespace shapes
             foreach (Shape aShape in triangleShape)
             {
                 string date = DateTime.Now.ToString("HH:mm:ss MM/dd/yyyy");
-                return aShape.ToString() + " - " + date;
+                return date + " - " + aShape.ToString();
             }
             return null;
         }
