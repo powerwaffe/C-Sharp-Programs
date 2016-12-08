@@ -82,6 +82,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MyTownDBDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="MyTownDBDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyTownDBDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MyTownDBDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyTownDBDataSet3.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -128,6 +138,28 @@
     </None>
     <None Include="MyTownDBDataSet1.xss">
       <DependentUpon>MyTownDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="MyTownDBDataSet2.xsc">
+      <DependentUpon>MyTownDBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="MyTownDBDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MyTownDBDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MyTownDBDataSet2.xss">
+      <DependentUpon>MyTownDBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="MyTownDBDataSet3.xsc">
+      <DependentUpon>MyTownDBDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="MyTownDBDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MyTownDBDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MyTownDBDataSet3.xss">
+      <DependentUpon>MyTownDBDataSet3.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
